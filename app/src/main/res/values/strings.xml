@@ -231,4 +231,12 @@
     <string name="donate_low">1.99 USD</string>
     <string name="donate_high">9.99 USD</string>
     <string name="donate_exception">Sorry, Failed!</string>
+
+    <!-- Vue Stats  -->
+    <string name="stats_choice_league">Competition</string>
+    <string name="stats_choice_home_team">Home Team</string>
+    <string name="stats_choice_away_team">Away Team</string>
+    <string name="analyse_stat_text">Anaylse Statistique</string>
+
+
 </resources>

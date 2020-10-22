@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -13,5 +13,78 @@
         android:paddingTop="@dimen/dimen_common"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingBottom="@dimen/dimen_common">
-    </LinearLayout>
+
+        <TextView
+            android:id="@+id/competitionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/stats_choice_league"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerCompetition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/competitionName"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="-22dp"
+            android:layout_toRightOf="@id/competitionName" />
+
+        <TextView
+            android:id="@+id/hometeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/competitionName"
+            android:text="@string/stats_choice_home_team"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerHomeTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hometeam"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="-22dp"
+            android:layout_toRightOf="@id/hometeam" />
+
+        <TextView
+            android:id="@+id/awayteam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hometeam"
+            android:layout_marginTop="28dp"
+            android:text="@string/stats_choice_away_team"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerAwayTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinnerHomeTeam"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="27dp"
+            android:layout_toRightOf="@id/awayteam" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/analyticStatsButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/awayteam"
+            android:backgroundTint="#F44336"
+            android:text="@string/analyse_stat_text"
+            android:textColor="@color/white"
+            app:cornerRadius="24dp" />
+
+
+    </RelativeLayout>
 </androidx.core.widget.NestedScrollView>

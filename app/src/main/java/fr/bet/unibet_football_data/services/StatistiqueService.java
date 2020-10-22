@@ -7,11 +7,19 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import fr.bet.unibet_football_data.beans.Competition;
 import fr.bet.unibet_football_data.beans.Match;
 import fr.bet.unibet_football_data.beans.Team;
 
 public class StatistiqueService {
 
+    public static List<Competition> getAllCompetition(final String jsonData) {
+        Gson gson = new Gson();
+        Type listCompetitionType = new TypeToken<List<Competition>>() { }.getType();
+        List<Competition> competitions = gson.fromJson(jsonData, listCompetitionType);
+        return competitions;
+    }
     public static List<Match> getAllMatchs(final String jsonData) {
         Gson gson = new Gson();
         Type listMatchType = new TypeToken<List<Match>>() { }.getType();

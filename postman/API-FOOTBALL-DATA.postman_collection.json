@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "a027d4d9-9822-4590-83d3-bf459027a31b",
+		"name": "API-FOOTBALL-DATA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Competitions",
+			"item": [
+				{
+					"name": "Scorers",
+					"item": [
+						{
+							"name": "Scorers-PL (Premiere League)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{X-Auth-Token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api.football-data.org/v2/competitions/PL/scorers",
+									"protocol": "https",
+									"host": [
+										"api",
+										"football-data",
+										"org"
+									],
+									"path": [
+										"v2",
+										"competitions",
+										"PL",
+										"scorers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Scorers-FL1 (Ligue 1)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{X-Auth-Token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api.football-data.org/v2/competitions/FL1/scorers",
+									"protocol": "https",
+									"host": [
+										"api",
+										"football-data",
+										"org"
+									],
+									"path": [
+										"v2",
+										"competitions",
+										"FL1",
+										"scorers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Scorers-BL1 (Bundesliga 1)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{X-Auth-Token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api.football-data.org/v2/competitions/BL1/scorers",
+									"protocol": "https",
+									"host": [
+										"api",
+										"football-data",
+										"org"
+									],
+									"path": [
+										"v2",
+										"competitions",
+										"BL1",
+										"scorers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Scorers-GSL (Super League)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{X-Auth-Token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api.football-data.org/v2/competitions/GSL/scorers",
+									"protocol": "https",
+									"host": [
+										"api",
+										"football-data",
+										"org"
+									],
+									"path": [
+										"v2",
+										"competitions",
+										"GSL",
+										"scorers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Scorers-CL (Champions-League)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{X-Auth-Token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api.football-data.org/v2/competitions/CL/scorers",
+									"protocol": "https",
+									"host": [
+										"api",
+										"football-data",
+										"org"
+									],
+									"path": [
+										"v2",
+										"competitions",
+										"CL",
+										"scorers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Scorers-PPL (Primeira Liga)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{X-Auth-Token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api.football-data.org/v2/competitions/PPL/scorers",
+									"protocol": "https",
+									"host": [
+										"api",
+										"football-data",
+										"org"
+									],
+									"path": [
+										"v2",
+										"competitions",
+										"PPL",
+										"scorers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Scorers-DED (Eredivisie)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{X-Auth-Token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api.football-data.org/v2/competitions/DED/scorers",
+									"protocol": "https",
+									"host": [
+										"api",
+										"football-data",
+										"org"
+									],
+									"path": [
+										"v2",
+										"competitions",
+										"DED",
+										"scorers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Scorers-FL2 (Ligue 2)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{X-Auth-Token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api.football-data.org/v2/competitions/FL2/scorers",
+									"protocol": "https",
+									"host": [
+										"api",
+										"football-data",
+										"org"
+									],
+									"path": [
+										"v2",
+										"competitions",
+										"FL2",
+										"scorers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Scorers-CDR (Copa del Rey)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{X-Auth-Token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api.football-data.org/v2/competitions/CDR/scorers",
+									"protocol": "https",
+									"host": [
+										"api",
+										"football-data",
+										"org"
+									],
+									"path": [
+										"v2",
+										"competitions",
+										"CDR",
+										"scorers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Scorers-PD (Primera Division)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{X-Auth-Token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api.football-data.org/v2/competitions/PD/scorers",
+									"protocol": "https",
+									"host": [
+										"api",
+										"football-data",
+										"org"
+									],
+									"path": [
+										"v2",
+										"competitions",
+										"PD",
+										"scorers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Scorers-SA (Serie A)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{X-Auth-Token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api.football-data.org/v2/competitions/SA/scorers",
+									"protocol": "https",
+									"host": [
+										"api",
+										"football-data",
+										"org"
+									],
+									"path": [
+										"v2",
+										"competitions",
+										"SA",
+										"scorers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Scorers-FAC (FA-Cup)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{X-Auth-Token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api.football-data.org/v2/competitions/FAC/scorers",
+									"protocol": "https",
+									"host": [
+										"api",
+										"football-data",
+										"org"
+									],
+									"path": [
+										"v2",
+										"competitions",
+										"FAC",
+										"scorers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Scorers-ELC (Championship)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{X-Auth-Token}}"
+									}
+								],
+								"url": {
+									"raw": "https://api.football-data.org/v2/competitions/ELC/scorers",
+									"protocol": "https",
+									"host": [
+										"api",
+										"football-data",
+										"org"
+									],
+									"path": [
+										"v2",
+										"competitions",
+										"ELC",
+										"scorers"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "getAllCompetitions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{X-Auth-Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{endpoint}}/v2/competitions/",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"v2",
+								"competitions",
+								""
+							]
+						},
+						"description": "List all available competitions"
+					},
+					"response": []
+				}
+			],
+			"description": "Liste des compétitions : \r\n\r\nBL1\tGermany\t1. Bundesliga\r\nBL2\tGermany\t2. Bundesliga\r\nBL3\tGermany\t3. Bundesliga\r\nDFB\tGermany\tDfb-Cup\r\nPL\tEngland\tPremiere League\r\nEL1\tEngland\tLeague One\r\nELC\tEngland\tChampionship\r\nFAC\tEngland\tFA-Cup\r\nSA\tItaly\tSerie A\r\nSB\tItaly\tSerie B\r\nPD\tSpain\tPrimera Division\r\nSD\tSpain\tSegunda Division\r\nCDR\tSpain\tCopa del Rey\r\nFL1\tFrance\tLigue 1\r\nFL2\tFrance\tLigue 2\r\nDED\tNetherlands\tEredivisie\r\nPPL\tPortugal\tPrimeira Liga\r\nGSL\tGreece\tSuper League\r\nCL\tEurope\tChampions-League\r\nEL\tEurope\tUEFA-Cup\r\nEC\tEurope\tEuropean-Cup of Nations\r\nWC\tWorld\tWorld-Cup",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a771eb0b-3571-43b2-bc55-75fdb6b9eae9",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e9f9d1f-7b26-41ae-a346-7be3cc502b1d",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Match",
+			"item": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Team",
+			"item": [],
+			"description": "Show one particular team",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Areas",
+			"item": [],
+			"description": "List all available areas",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Player",
+			"item": [],
+			"description": "List one particular player",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
