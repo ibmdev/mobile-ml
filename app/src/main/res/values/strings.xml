@@ -237,6 +237,8 @@
     <string name="stats_choice_home_team">Home Team</string>
     <string name="stats_choice_away_team">Away Team</string>
     <string name="analyse_stat_text">Anaylse Statistique</string>
+    <string name="date_debut_datepicker">Date de début</string>
+    <string name="date_fin_datepicker">Date de fin</string>
 
 
 </resources>

@@ -73,17 +73,72 @@
             android:layout_marginTop="27dp"
             android:layout_toRightOf="@id/awayteam" />
 
+        <!-- Filtre date de début (par défaut année en cours) -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/date_debut"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_below="@id/awayteam"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#4CAF50"
+            android:text="@string/date_debut_datepicker"
+            android:textColor="@color/white"
+            app:cornerRadius="24dp" />
+
+
+
+        <!-- Filtre date de fin (par défaut année en cours) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/date_fin"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_toRightOf="@id/date_debut"
+            android:layout_marginLeft="30dp"
+            android:layout_alignBottom="@id/date_debut"
+            android:backgroundTint="#4CAF50"
+            android:text="@string/date_fin_datepicker"
+            android:textColor="@color/white"
+            app:cornerRadius="24dp" />
+
+
+        <!-- Filtre sur les matchs à domicile, à l'éxtérieur et globaux -->
+
+        <!-- Filtre sur l'heure minimum et maximum à laquelle se joue les matchs -->
+
+        <!-- Filtre sur les victoire, matchs nul ou défaite -->
+
+        <!-- Filtre sur les matchs de plus ou moins 0.5, 1.5, 2.5, 3.5 etc buts -->
+
+        <!-- Bouton d'analyse statistiques -->
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/analyticStatsButton"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="30dp"
-            android:layout_below="@id/awayteam"
+            android:layout_below="@id/date_debut"
             android:backgroundTint="#F44336"
             android:text="@string/analyse_stat_text"
             android:textColor="@color/white"
             app:cornerRadius="24dp" />
+
+        <!-- BarChart Goals for Home Team-->
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chartHomeGF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/analyticStatsButton" />
+
+        <!-- BarChart Goals for Away Team-->
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chartAwayGF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/chartHomeGF" />
+
 
 
     </RelativeLayout>

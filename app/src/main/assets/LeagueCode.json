@@ -1,5 +1,8 @@
 [
   {"Code": "FL1", "Country": "France", "League": "Ligue 1"},
-  {"Code": "FL2", "Country": "France", "League": "Ligue 2"}
-
+  {"Code": "FL2", "Country": "France", "League": "Ligue 2"},
+  {"Code": "BL1", "Country": "Germany", "League": "Bundesliga 1"},
+  {"Code": "PD", "Country": "Spain", "League": "Primera Division"},
+  {"Code": "SA", "Country": "Italy", "League": "Serie A"},
+  {"Code": "DED", "Country": "Netherlands", "League": "Eredivisie"}
 ]

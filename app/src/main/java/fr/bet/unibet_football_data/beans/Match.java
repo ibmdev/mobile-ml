@@ -138,4 +138,25 @@ public class Match {
     public void setAR(Integer AR) {
         this.AR = AR;
     }
+
+    @Override
+    public String toString() {
+        return "Match{" +
+                "Nom de la division ='" + Div + '\'' +
+                ", Date du match ='" + Date + '\'' +
+                ", Heure du match ='" + Time + '\'' +
+                ", Equipe Home ='" + HomeTeam + '\'' +
+                ", Equipe Away ='" + AwayTeam + '\'' +
+                ", Nombre de buts équipe home =" + FTHG +
+                ", Nombre de buts équipe away =" + FTAG +
+                ", Nombre de tirs au but home =" + HS +
+                ", Nombre de tirs au but away =" + AS +
+                ", Nombre de tirs cadrés home =" + HST +
+                ", Nombre de tirs cadrés away =" + AST +
+                ", Nombre de cartons jaune dans le match home =" + HY +
+                ", Nombre de cartons jaune dans le match away =" + AY +
+                ", Nombre de cartons rouge dans le match home =" + HR +
+                ", Nombre de cartons rouge dans le match away =" + AR +
+                '}';
+    }
 }

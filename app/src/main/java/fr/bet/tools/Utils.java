@@ -3,8 +3,12 @@ package fr.bet.tools;
 import android.content.Context;
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Utils {
+
+    final static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     public static String getJsonFromAssets(Context context, String fileName) {
         String jsonString;
@@ -21,5 +25,8 @@ public class Utils {
             return null;
         }
         return jsonString;
+    }
+    public static LocalDate convertStringToLocalDate(final String date) {
+        return LocalDate.parse(date, formatter);
     }
 }

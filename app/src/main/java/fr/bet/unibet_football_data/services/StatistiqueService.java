@@ -20,6 +20,14 @@ public class StatistiqueService {
         List<Competition> competitions = gson.fromJson(jsonData, listCompetitionType);
         return competitions;
     }
+
+    public static List<String> getAllCompetitionAsString(final List<Competition> competitions) {
+        List<String> competitionAsName = competitions.stream()
+                .map(c -> c.getLeague())
+                .collect(Collectors.toList());
+        competitionAsName.add(0,"");
+        return competitionAsName;
+    }
     public static List<Match> getAllMatchs(final String jsonData) {
         Gson gson = new Gson();
         Type listMatchType = new TypeToken<List<Match>>() { }.getType();
