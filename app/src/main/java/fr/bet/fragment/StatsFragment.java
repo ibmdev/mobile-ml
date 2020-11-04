@@ -27,6 +27,7 @@ import fr.bet.tools.material_design.ComponentBuilder;
 import fr.bet.tools.Utils;
 import fr.bet.tools.mp_android_chart.BarchartComponentBuilder;
 import fr.bet.unibet_football_data.beans.Competition;
+import fr.bet.unibet_football_data.beans.Team;
 import fr.bet.unibet_football_data.model.ExtractMatchRequest;
 import fr.bet.unibet_football_data.model.ExtractMatchResponse;
 import fr.bet.unibet_football_data.services.ExtractDataService;
@@ -181,7 +182,7 @@ public class StatsFragment extends Fragment implements View.OnClickListener, Vie
                 }
             }
             @Override
-            public void onNothingSelected(AdapterView<?> arg0)
+            public void onNothingSelected(AdapterView<?> av)
             {}
         });
     }
@@ -209,6 +210,9 @@ public class StatsFragment extends Fragment implements View.OnClickListener, Vie
                 matchesToAnalyze.getAwayTeamMatches().stream().forEach(m -> Log.i("datacouk", "Away Matches" + m.toString()));
                 BarchartComponentBuilder.createBarChartGoalsFor(chartGFHomeTeam, matchesToAnalyze.getHomeTeamMatches(), homeTeamItemSelected);
                 BarchartComponentBuilder.createBarChartGoalsFor(chartGFAwayTeam, matchesToAnalyze.getAwayTeamMatches(), awayTeamItemSelected);
+                // Statistiques complete de la home team
+                Team homeTeam = StatistiqueService.fillStatsForTeam(homeTeamItemSelected, matchesToAnalyze.getHomeTeamMatches());
+                Log.i("datacouk","Team Home Classement : " + homeTeam.getName() + " > " + homeTeam.toString());
 
                 break;
             case R.id.date_debut:

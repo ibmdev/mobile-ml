@@ -4,15 +4,15 @@ public class Team {
 
     public Team(String name) {
         this.name = name;
+        setRankGlobal(new Ranking());
+        setRankHome(new Ranking());
+        setRankAway(new Ranking());
     }
 
     private String name;
-    private Integer played = 0; // Nombre de matchs joués
-    private Integer points = 0; // Total de points
-    private Integer GFTotal = 0; // Total de buts Pour
-    private Integer GCTotal = 0; // Total de buts Contre
-    private Integer CYTotal = 0; // Total de cartons jaune
-    private Integer CRTotal = 0; // Total de cartons rouge
+    private Ranking rankHome;
+    private Ranking rankAway;
+    private Ranking rankGlobal;
 
     public String getName() {
         return name;
@@ -22,62 +22,37 @@ public class Team {
         this.name = name;
     }
 
-    public Integer getPlayed() {
-        return played;
+    public Ranking getRankHome() {
+        return rankHome;
     }
 
-    public void setPlayed(Integer played) {
-        this.played = played;
+    public void setRankHome(Ranking rankHome) {
+        this.rankHome = rankHome;
     }
 
-    public Integer getPoints() {
-        return points;
+    public Ranking getRankAway() {
+        return rankAway;
     }
 
-    public void setPoints(Integer points) {
-        this.points = points;
+    public void setRankAway(Ranking rankAway) {
+        this.rankAway = rankAway;
     }
 
-    public Integer getGFTotal() {
-        return GFTotal;
+    public Ranking getRankGlobal() {
+        return rankGlobal;
     }
 
-    public void setGFTotal(Integer GFTotal) {
-        this.GFTotal = GFTotal;
+    public void setRankGlobal(Ranking rankGlobal) {
+        this.rankGlobal = rankGlobal;
     }
 
-    public Integer getGCTotal() {
-        return GCTotal;
-    }
-
-    public void setGCTotal(Integer GCTotal) {
-        this.GCTotal = GCTotal;
-    }
-
-    public Integer getCYTotal() {
-        return CYTotal;
-    }
-
-    public void setCYTotal(Integer CYTotal) {
-        this.CYTotal = CYTotal;
-    }
-
-    public Integer getCRTotal() {
-        return CRTotal;
-    }
-
-    public void setCRTotal(Integer CRTotal) {
-        this.CRTotal = CRTotal;
-    }
     @Override
     public String toString() {
-        return name + " : [" +
-                "Matchs joués = " + played +
-                ", Nombre de points = " + points +
-                ", Buts Pour = " + GFTotal +
-                ", Buts Contre = " + GCTotal +
-                ", Cartons jaune = " + CYTotal +
-                ", Cartons rouge = " + CRTotal +
-                ']';
+        return "Equipe {" +
+                "Nom de l'équipe ='" + name + '\'' +
+                ", Classement Home =" + rankHome.toString() +
+                ", Classement Away =" + rankAway.toString() +
+                ", Classement global =" + rankGlobal.toString() +
+                '}';
     }
 }

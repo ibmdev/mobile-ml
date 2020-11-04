@@ -101,12 +101,29 @@
             android:textColor="@color/white"
             app:cornerRadius="24dp" />
 
+        <!-- Filtre heure minimal à laquelle se joue les matchs -->
+        <!-- Filtre heure maximale à laquelle se joue les matchs -->
 
-        <!-- Filtre sur les matchs à domicile, à l'éxtérieur et globaux -->
 
-        <!-- Filtre sur l'heure minimum et maximum à laquelle se joue les matchs -->
+        <!-- Composant multichoix , filtres équipe Home :
+        - Matchs à domicile,
+        - Matchs à l'éxtérieur
+        - Matchs globaux (par défaut)
+        - Victoire
+        - Matchs nul
+        - Défaite
+        - Type de graphe à afficher
+         -->
 
-        <!-- Filtre sur les victoire, matchs nul ou défaite -->
+        <!-- Composant multichoix , filtres équipe Away :
+        - Matchs à domicile,
+        - Matchs à l'éxtérieur
+        - Matchs globaux (par défaut)
+        - Victoire
+        - Matchs nul
+        - Défaite
+        - Type de graphe à afficher
+         -->
 
         <!-- Filtre sur les matchs de plus ou moins 0.5, 1.5, 2.5, 3.5 etc buts -->
 

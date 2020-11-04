@@ -1,5 +1,7 @@
 package fr.bet.unibet_football_data.services;
 
+import android.util.Log;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
@@ -55,31 +57,40 @@ public class StatistiqueService {
     public static Team fillStatsForTeam(final String teamName, final List<Match> allMatchs) {
         List<Match> matchesTeam = getMatchesByTeamName(teamName, allMatchs);
         Team team = new Team(teamName);
-        team.setPlayed(matchesTeam.size());
         matchesTeam.stream().forEach((match) -> {
             if(teamName.equals(match.getHomeTeam())) {
-                team.setGFTotal(team.getGFTotal() + match.getFTHG());
-                team.setGCTotal(team.getGCTotal() + match.getFTAG());
-                team.setCYTotal(team.getCYTotal() + match.getHY());
-                team.setCRTotal(team.getCRTotal() + match.getHR());
+                team.getRankHome().setPlayed(team.getRankHome().getPlayed() + 1);
+                team.getRankHome().setGFTotal(team.getRankHome().getGFTotal() + match.getFTHG());
+                team.getRankHome().setGCTotal(team.getRankHome().getGCTotal() + match.getFTAG());
+                team.getRankHome().setCYTotal(team.getRankHome().getCYTotal() + match.getHY());
+                team.getRankHome().setCRTotal(team.getRankHome().getCRTotal() + match.getHR());
                 if(match.getFTHG() > match.getFTAG()) {
-                    team.setPoints(team.getPoints() + 3);
+                    team.getRankHome().setPoints(team.getRankHome().getPoints() + 3);
                 } else if(match.getFTHG() == match.getFTAG()) {
-                    team.setPoints(team.getPoints() + 1);
+                    team.getRankHome().setPoints(team.getRankHome().getPoints() + 1);
                 }
 
             } else if(teamName.equals(match.getAwayTeam())) {
-                team.setGFTotal(team.getGFTotal() + match.getFTAG());
-                team.setGCTotal(team.getGCTotal() + match.getFTHG());
-                team.setCYTotal(team.getCYTotal() + match.getAY());
-                team.setCRTotal(team.getCRTotal() + match.getAR());
+                team.getRankAway().setPlayed(team.getRankAway().getPlayed() + 1);
+                team.getRankAway().setGFTotal(team.getRankAway().getGFTotal() + match.getFTAG());
+                team.getRankAway().setGCTotal(team.getRankAway().getGCTotal() + match.getFTHG());
+                team.getRankAway().setCYTotal(team.getRankAway().getCYTotal() + match.getAY());
+                team.getRankAway().setCRTotal(team.getRankAway().getCRTotal() + match.getAR());
                 if(match.getFTAG() > match.getFTHG()) {
-                    team.setPoints(team.getPoints() + 3);
+                    team.getRankAway().setPoints(team.getRankAway().getPoints() + 3);
                 } else if(match.getFTHG() == match.getFTAG()) {
-                    team.setPoints(team.getPoints() + 1);
+                    team.getRankAway().setPoints(team.getRankAway().getPoints() + 1);
                 }
             }
         });
+        // Global
+        team.getRankGlobal().setPoints(team.getRankHome().getPoints() + team.getRankAway().getPoints());
+        team.getRankGlobal().setPlayed(matchesTeam.size());
+        team.getRankGlobal().setGFTotal(team.getRankHome().getGFTotal() + team.getRankAway().getGFTotal());
+        team.getRankGlobal().setGCTotal(team.getRankHome().getGCTotal() + team.getRankAway().getGCTotal());
+        team.getRankGlobal().setCYTotal(team.getRankHome().getCYTotal() + team.getRankAway().getCYTotal());
+        team.getRankGlobal().setCRTotal(team.getRankHome().getCRTotal() + team.getRankAway().getCRTotal());
+
         return team;
     }
 
@@ -88,14 +99,14 @@ public class StatistiqueService {
     /* Tri par nombre de points */
     public static List<Team> sortByPoints(final List<Team> data) {
         return  data.stream()
-        .sorted(Comparator.comparing(Team::getPoints))
+        .sorted(Comparator.comparing(Team-> Team.getRankGlobal().getPoints()))
         .collect(Collectors.toList());
     }
 
     /* Tri par nombre de points */
     public static List<Team> sortByGoalsFor(final List<Team> data) {
         return  data.stream()
-                .sorted(Comparator.comparing(Team::getGFTotal))
+                .sorted(Comparator.comparing(Team-> Team.getRankGlobal().getGFTotal()))
                 .collect(Collectors.toList());
     }
 }
